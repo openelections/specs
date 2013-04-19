@@ -1,4 +1,3 @@
-specs
-=====
+### OpenElections Specs
 
-Specs for OpenElections Data
+This repository contains drafts of specifications for OpenElections data, including results and election metadata.
