@@ -34,3 +34,23 @@ Election results should be placed in a csv file for statewide results with a fil
 
 The county-specific data should be in a csv file with the filename `$YEAR/counties/$YEAR$MONTH$DAY__$STATE__$ELECTIONNAME__$COUNTY__$BREAKDOWN.csv` where
  * `$COUNTY` is the full name of the county in all lower-case.
+
+## CSV Format
+Each csv should be comma delineated (not tabs). The first row should specify which fields are present. Here are the expected fields and whether the column is required (which does not necessarily mean that the field has a value defined for every row).
+
+ * **Region Fields**
+   * `county` (string) *required*
+   * `precinct` (string) *required for county-specific results*
+ * **Election Fields**
+   * `office` (string) *required*
+   * `district` (int) *required*
+   * `party` (string) *required*
+   * `candidate` (string) *required*
+ * **Count Fields** (int type for all)
+   * `votes` *required*
+   * Optional Vote Types, including
+     * `election_day`
+     * `provisional`
+     * `early_voting`
+     * `absentee`
+     * `advance_in_person`
